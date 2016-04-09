@@ -1,0 +1,166 @@
+<flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.com/flowers"
+         xsi:schemaLocation="http://www.example.com/flowers flowers.xsd">
+    <one-year-flower id="F1">
+        <name>Tulip</name>
+        <soil>UNPAVED</soil>
+        <origin>Netherlands</origin>
+        <visual-parameters>
+            <leaf-color>LIGHT_GREEN</leaf-color>
+            <flower-color>RED</flower-color>
+            <average-size-cm>40</average-size-cm>
+        </visual-parameters>
+        <growing-tips>
+            <required-temperature>26</required-temperature>
+            <lightening>HELIOPHILOUS</lightening>
+            <week-watering-ml>800</week-watering-ml>
+        </growing-tips>
+        <multiplying>BULB</multiplying>
+        <flowering-days-count>30</flowering-days-count>
+    </one-year-flower>
+
+    <multi-year-flower id="F2">
+        <name>Clover</name>
+        <soil>SOD_PODZOLIC</soil>
+        <origin>Russia</origin>
+        <visual-parameters>
+            <leaf-color>GREEN</leaf-color>
+            <flower-color>PINK</flower-color>
+            <average-size-cm>25</average-size-cm>
+        </visual-parameters>
+        <growing-tips>
+            <required-temperature>20</required-temperature>
+            <lightening>NEUTRAL</lightening>
+            <week-watering-ml>1000</week-watering-ml>
+        </growing-tips>
+        <multiplying>SEED</multiplying>
+        <age-years>2</age-years>
+    </multi-year-flower>
+
+
+    <one-year-flower id="F3">
+        <name>Hyacinth</name>
+        <soil>UNPAVED</soil>
+        <origin>Greece</origin>
+        <visual-parameters>
+            <leaf-color>GREEN</leaf-color>
+            <flower-color>BLUE</flower-color>
+            <average-size-cm>35</average-size-cm>
+        </visual-parameters>
+        <growing-tips>
+            <required-temperature>25</required-temperature>
+            <lightening>HELIOPHILOUS</lightening>
+            <week-watering-ml>900</week-watering-ml>
+        </growing-tips>
+        <multiplying>BULB</multiplying>
+        <flowering-days-count>17</flowering-days-count>
+    </one-year-flower>
+
+    <multi-year-flower id="F4">
+        <name>Lily of the Valley</name>
+        <soil>PODZOLIC</soil>
+        <origin>Belarus</origin>
+        <visual-parameters>
+            <leaf-color>GREEN</leaf-color>
+            <flower-color>WHITE</flower-color>
+            <average-size-cm>22</average-size-cm>
+        </visual-parameters>
+        <growing-tips>
+            <required-temperature>20</required-temperature>
+            <lightening>NEUTRAL</lightening>
+            <week-watering-ml>700</week-watering-ml>
+        </growing-tips>
+        <multiplying>STALK</multiplying>
+        <age-years>3</age-years>
+    </multi-year-flower>
+
+    <multi-year-flower id="F5">
+        <name>Rose</name>
+        <soil>UNPAVED</soil>
+        <origin>Belarus</origin>
+        <visual-parameters>
+            <leaf-color>GREEN</leaf-color>
+            <flower-color>YELLOW</flower-color>
+            <average-size-cm>55</average-size-cm>
+        </visual-parameters>
+        <growing-tips>
+            <required-temperature>25</required-temperature>
+            <lightening>HELIOPHILOUS</lightening>
+            <week-watering-ml>1500</week-watering-ml>
+        </growing-tips>
+        <multiplying>STALK</multiplying>
+        <age-years>2</age-years>
+    </multi-year-flower>
+    
+    <multi-year-flower id="F6">
+        <name>Daisy</name>
+        <soil>PODZOLIC</soil>
+        <origin>Latvia</origin>
+        <visual-parameters>
+            <leaf-color>LIGHT_GREEN</leaf-color>
+            <flower-color>WHITE</flower-color>
+            <average-size-cm>15</average-size-cm>
+        </visual-parameters>
+        <growing-tips>
+            <required-temperature>23</required-temperature>
+            <lightening>NOT_HELIOPHILOUS</lightening>
+            <week-watering-ml>1000</week-watering-ml>
+        </growing-tips>
+        <multiplying>STALK</multiplying>
+        <age-years>1</age-years>
+    </multi-year-flower>
+    
+    <one-year-flower id="F7">
+        <name>Carnation</name>
+        <soil>SOD_PODZOLIC</soil>
+        <origin>Russia</origin>
+        <visual-parameters>
+            <leaf-color>GREEN</leaf-color>
+            <flower-color>RED</flower-color>
+            <average-size-cm>45</average-size-cm>
+        </visual-parameters>
+        <growing-tips>
+            <required-temperature>25</required-temperature>
+            <lightening>NOT_HELIOPHILOUS</lightening>
+            <week-watering-ml>1200</week-watering-ml>
+        </growing-tips>
+        <multiplying>SEED</multiplying>
+        <flowering-days-count>55</flowering-days-count>
+    </one-year-flower>
+
+    <multi-year-flower id="F8">
+        <name>Geranium</name>
+        <soil>UNPAVED</soil>
+        <origin>Poland</origin>
+        <visual-parameters>
+            <leaf-color>YELLOW</leaf-color>
+            <flower-color>ORANGE</flower-color>
+            <average-size-cm>27</average-size-cm>
+        </visual-parameters>
+        <growing-tips>
+            <required-temperature>25</required-temperature>
+            <lightening>NEUTRAL</lightening>
+            <week-watering-ml>1050</week-watering-ml>
+        </growing-tips>
+        <multiplying>SEED</multiplying>
+        <age-years>4</age-years>
+    </multi-year-flower>
+    
+    <multi-year-flower id="F9">
+        <name>Cyclamen</name>
+        <soil>SOD_PODZOLIC</soil>
+        <origin>Netherlands</origin>
+        <visual-parameters>
+            <leaf-color>GREEN</leaf-color>
+            <flower-color>PINK</flower-color>
+            <average-size-cm>20</average-size-cm>
+        </visual-parameters>
+        <growing-tips>
+            <required-temperature>23</required-temperature>
+            <lightening>NEUTRAL</lightening>
+            <week-watering-ml>150</week-watering-ml>
+        </growing-tips>
+        <multiplying>STALK</multiplying>
+        <age-years>1</age-years>
+    </multi-year-flower>
+</flowers>

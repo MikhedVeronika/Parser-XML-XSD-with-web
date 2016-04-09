@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/flowers"
+        xmlns:tns="http://www.example.com/flowers"
+        elementFormDefault="qualified">
+    <element name="flowers">
+        <complexType>
+            <sequence>
+                <element ref="tns:flower" minOccurs="1" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="flower" type="tns:Flower" abstract="true"/>
+    <element name="one-year-flower" type="tns:OneYearFlower" substitutionGroup="tns:flower"/>
+    <element name="multi-year-flower" type="tns:MultiYearFlower" substitutionGroup="tns:flower"/>
+
+    <complexType name="Flower">
+        <sequence>
+            <element name="name" type="string" />
+            <element name="soil">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="PODZOLIC" />
+                        <enumeration value="UNPAVED" />
+                        <enumeration value="SOD_PODZOLIC"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="origin" type="string" />
+            <element name="visual-parameters" type="tns:VisualParameters" />
+            <element name="growing-tips" type="tns:GrowingTips"/>
+            <element name="multiplying">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="LEAF"/>
+                        <enumeration value="STALK" />
+                        <enumeration value="SEED" />
+                        <enumeration value="BULB" />
+                    </restriction>
+                </simpleType>
+            </element>
+
+        </sequence>
+        <attribute name="id" type="tns:IdFlower" use="required"/>
+    </complexType>
+
+    <complexType name="OneYearFlower">
+        <complexContent>
+            <extension base="tns:Flower">
+                <sequence>
+                    <element name="flowering-days-count" type="positiveInteger" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="MultiYearFlower">
+        <complexContent>
+            <extension base="tns:Flower">
+                <sequence>
+                    <element name="age-years" type="positiveInteger" />
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="VisualParameters">
+        <sequence>
+            <element name="leaf-color">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="LIGHT_GREEN" />
+                        <enumeration value="GREEN" />
+                        <enumeration value="YELLOW" />
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="flower-color">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="WHITE" />
+                        <enumeration value="BLUE" />
+                        <enumeration value="LIGHT_BLUE" />
+                        <enumeration value="GREEN" />
+                        <enumeration value="YELLOW" />
+                        <enumeration value="RED" />
+                        <enumeration value="ORANGE" />
+                        <enumeration value="PINK" />
+                        <enumeration value="VIOLET" />
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="average-size-cm" type="positiveInteger" />
+        </sequence>
+    </complexType>
+
+    <complexType name="GrowingTips">
+        <sequence>
+            <element name="required-temperature" type="positiveInteger"/>
+            <element name="lightening">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="HELIOPHILOUS" />
+                        <enumeration value="NEUTRAL" />
+                        <enumeration value="NOT_HELIOPHILOUS" />
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="week-watering-ml" type="positiveInteger" />
+        </sequence>
+    </complexType>
+
+    <simpleType name="IdFlower">
+        <restriction base="ID">
+            <pattern value="F[1-9][0-9]*"/>
+        </restriction>
+    </simpleType>
+</schema>
